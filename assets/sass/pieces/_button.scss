@@ -1,0 +1,19 @@
+// Button
+//-------------------------------------------------//
+.button {
+    @include inline-block;
+    
+    background: $black;
+    
+    padding: $spacingSmall $spacingMedium;
+    
+    color: $white;
+    text-decoration: none; 
+    
+    &:hover {
+        background: $grey;
+        
+        color: $black;
+    }
+}
+//-------------------------------------------------//

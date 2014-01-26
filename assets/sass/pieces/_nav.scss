@@ -1,0 +1,54 @@
+// Nav - Main
+//-------------------------------------------------//
+.nav-main {
+    background: $grey;
+    
+    padding: $spacingTiny;
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        
+        text-align: center;
+        
+        list-style: none;
+        
+        li {
+            @include inline-block;
+            
+            margin: 0 $spacingTiny;
+            
+            a { 
+                display: block;
+                
+                padding: $spacingTiny;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+//-------------------------------------------------//
+
+
+// Nav - Subnavigation
+//-------------------------------------------------//
+.nav-sub {
+    margin: 0;
+    padding: 0;
+    
+    ul {
+        
+        li {
+            
+            a { 
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+//-------------------------------------------------//

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <!--[if lt IE 7]>
+        <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+    <![endif]-->
+    
+    <!--[if IE 7]>
+        <html class="no-js lt-ie9 lt-ie8">
+    <![endif]-->
+    
+    <!--[if IE 8]>
+        <html class="no-js lt-ie9">
+    <![endif]-->
+    
+    <!--[if gt IE 8]><!-->
+        <html class="no-js"> 
+    <!--<![endif]-->
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+        {if {exp:stash:not_empty name="seo_title"}}
+            <title>{exp:stash:get name="seo_title"} | {site_name}</title>
+        {if:else}
+            <title>{site_name} | Default SEO Title</title>
+        {/if}
+        
+        {if {exp:stash:not_empty name="seo_dsc"}}
+            <meta name="Description" content="{exp:stash:get name='seo_dsc'}">
+        {if:else}
+            <meta name="Description" content="Default SEO Description">
+        {/if}
+        
+        
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-152x152-precomposed.png" />
+        
+        
+        <!-- Add your stylesheets here -->
+        <link rel="stylesheet" href="{exp:setversion path='/assets/css/screen.css'}">
+        
+        <!-- Add your pre-render javascript here -->
+        <!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script>window.html5 || document.write('<script src="{exp:setversion path='/assets/js/libraries/html5shiv.js'}"><\/script>')</script>
+			<script src="{exp:setversion path='/assets/js/libraries/respond.js'}"></script>
+		<![endif]-->
+        
+        <script src="{exp:setversion path='/assets/js/libraries/modernizr-2.6.2.js'}"></script>
+    </head>
+    
+    
+    
+    <body class='{exp:stash:get name="body_class"}'>
+    
+        <div class='page-wrapper'>
+            <header role="banner" class="hdr-main stretch" data-stretch="{exp:stash:get name='feature' {global:param_cache_param}}">
+                <div class='container'>
+                    <div class='column-full'>
+                        <h1 class="logo"><a href="/">{site_name}</a></h1>
+                    </div>
+                </div>
+            </header>
+            
+            
+            <nav class="nav-main" role="navigation">
+                <div class='container'>
+                    <div class='column-full'>
+                        <ul>
+                            <li><a href="{path='page_templates/subpage'}">Subpage Example</a></li>
+                            <li><a href="{path='site/four04'}">404 Page Example</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            
+            <section class="main" role="main">
+                {exp:stash:get name='page_main'}
+            </section>
+            
+            
+            
+            <footer class="ftr-main">
+                <div class='container'>
+                    <div class='column-full'>
+                        <h3>Get In Touch</h3>
+                        <h4>{ftr-email}</h4>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        
+        
+        
+        <!-- Add your post-render javascript here -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{exp:setversion path='/assets/js/libraries/jquery-1.10.2.js'}"><\/script>')</script>
+        <script src="{exp:setversion path='/assets/js/libraries/fastclick.js'}"></script>
+        
+
+        <!-- Add you template specific javascript -->
+        {exp:stash:get name='page_js'}
+        
+
+        <!-- Add your Google Analytics tracking code: change UA-XXXXX-X to be your site's ID. -->
+        <!--
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        -->
+    </body>
+</html>
