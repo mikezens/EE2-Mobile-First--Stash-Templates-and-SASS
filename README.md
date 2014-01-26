@@ -7,7 +7,7 @@ The framework is very barebones. I use this to start my EE2 projects.
 #### Install Instructions
 1. Move then [sync](http://expressionengine.com/user_guide/cp/design/templates/synchronize_templates.html) the templates. 
 	* These files can be found at <code>/system/expressionengine/templates/default_site/</code>
-	* You should also remove the 'x' at the beginning of any template files, these are to be [hidden templates](http://expressionengine.com/user_guide/templates/hidden_templates.html).
+	* Please note, there is one hidden template, <code>/system/expressionengine/templates/default_site/include_templates.group/.wrapper.html</code>
 
 2. Move then install add-ons.
 	* These files can be found at <code>/system/expressionengine/third_party/</code>
